@@ -16,5 +16,11 @@ const adminRoutes = require("./routes/adminRoutes");
 app.use("/api/orders", orderRoutes);
 app.use("/api/admin", adminRoutes);
 
-const PORT = process.env.PORT || 5000;
-app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+// Only listen on PORT when running locally
+if (process.env.NODE_ENV !== "production") {
+  const PORT = process.env.PORT || 5000;
+  app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+}
+
+// Export the app for Vercel serverless deployment
+module.exports = app;
