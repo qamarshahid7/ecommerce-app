@@ -1,5 +1,4 @@
 {
-  "installCommand": "npm install --legacy-peer-deps",
   "services": {
     "frontend": {
       "root": "frontend",
@@ -7,7 +6,8 @@
     },
     "backend": {
       "root": "backend",
-      "framework": "express"
+      "framework": "express",
+      "installCommand": "npm install --legacy-peer-deps"
     }
   }
 }
