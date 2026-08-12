@@ -9,5 +9,9 @@
       "framework": "express",
       "installCommand": "npm install --legacy-peer-deps"
     }
-  }
+  },
+  "rewrites": [
+    { "source": "/api/(.*)", "destination": { "service": "backend" } },
+    { "source": "/(.*)", "destination": { "service": "frontend" } }
+  ]
 }
