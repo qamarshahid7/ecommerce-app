@@ -1,7 +1,7 @@
 {
   "services": {
     "web": {
-      "src": "backend/server.js"
+      "path": "backend/server.js"
     }
   },
   "rewrites": [
