@@ -1,9 +1,4 @@
 {
-  "services": {
-    "web": {
-      "path": "backend/server.js"
-    }
-  },
   "rewrites": [
     {
       "source": "/api/(.*)",
