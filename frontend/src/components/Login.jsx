@@ -21,18 +21,15 @@ export default function Login() {
     try {
       if (isLogin) {
         // Login Request
-        const { data } = await axios.post(
-          "http://localhost:5000/api/users/login",
-          {
-            email,
-            password,
-          },
-        );
+        const { data } = await axios.post("/api/users/login", {
+          email,
+          password,
+        });
         localStorage.setItem("userInfo", JSON.stringify(data));
         navigate(data.isAdmin ? "/admin/dashboard" : "/");
       } else {
         // Register Request
-        const { data } = await axios.post("http://localhost:5000/api/users", {
+        const { data } = await axios.post("/api/users", {
           name,
           email,
           password,
